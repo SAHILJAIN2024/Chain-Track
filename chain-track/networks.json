@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "CRXFactory": {
+      "address": "0x94D9Dd2ACB1a6b72c55D3D0eCB6e4682D68C0014",
+      "startBlock": 10562636
+    }
+  }
+}

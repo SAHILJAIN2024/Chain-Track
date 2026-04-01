@@ -1,0 +1,10 @@
+type SupplyChainCreated @entity(immutable: true) {
+  id: Bytes!
+  creator: Bytes! # address
+  contractAddress: Bytes! # address
+  name: String! # string
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

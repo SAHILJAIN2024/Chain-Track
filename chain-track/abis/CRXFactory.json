@@ -1,0 +1,119 @@
+[
+  {
+    "name": "SupplyChainCreated",
+    "type": "event",
+    "inputs": [
+      {
+        "name": "creator",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "contractAddress",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "name": "allSupplyChains",
+    "type": "function",
+    "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  },
+  {
+    "name": "createSupplyChain",
+    "type": "function",
+    "inputs": [
+      { "name": "name", "type": "string", "internalType": "string" },
+      { "name": "admin", "type": "address", "internalType": "address" },
+      { "name": "creators", "type": "address[]", "internalType": "address[]" },
+      { "name": "committers", "type": "address[]", "internalType": "address[]" }
+    ],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "getAllSupplyChains",
+    "type": "function",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "components": [
+          {
+            "name": "contractAddress",
+            "type": "address",
+            "internalType": "address"
+          },
+          { "name": "creator", "type": "address", "internalType": "address" },
+          { "name": "name", "type": "string", "internalType": "string" },
+          { "name": "createdAt", "type": "uint256", "internalType": "uint256" }
+        ],
+        "internalType": "struct CRXFactory.SupplyChainMeta[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "getUserSupplyChains",
+    "type": "function",
+    "inputs": [
+      { "name": "user", "type": "address", "internalType": "address" }
+    ],
+    "outputs": [
+      { "name": "", "type": "address[]", "internalType": "address[]" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "supplyChains",
+    "type": "function",
+    "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "outputs": [
+      {
+        "name": "contractAddress",
+        "type": "address",
+        "internalType": "address"
+      },
+      { "name": "creator", "type": "address", "internalType": "address" },
+      { "name": "name", "type": "string", "internalType": "string" },
+      { "name": "createdAt", "type": "uint256", "internalType": "uint256" }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "name": "totalSupplyChains",
+    "type": "function",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+    "stateMutability": "view"
+  },
+  {
+    "name": "userSupplyChains",
+    "type": "function",
+    "inputs": [
+      { "name": "", "type": "address", "internalType": "address" },
+      { "name": "", "type": "uint256", "internalType": "uint256" }
+    ],
+    "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+    "stateMutability": "view"
+  }
+]
