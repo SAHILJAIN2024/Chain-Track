@@ -31,7 +31,8 @@ router.post("/supply-chains", upload.single("file"), async (req, res) => {
   const {
     ownerAddress,
     name,
-    location
+    location,
+    processSteps
   } = req.body;
 
   const file = req.file;
@@ -39,6 +40,7 @@ router.post("/supply-chains", upload.single("file"), async (req, res) => {
   try {
     let fileIpfsUri = "";
     let fileHttpUri = "";
+    
 
     /* -------- Upload File to IPFS -------- */
 
@@ -59,6 +61,7 @@ router.post("/supply-chains", upload.single("file"), async (req, res) => {
       attributes: [
         { trait_type: "Citizen", value: ownerAddress },
         { trait_type: "Location", value: location },
+        { trait_type: "Process Steps", value: processSteps },
         {
           trait_type: "Created At",
           value: new Date().toISOString(),

@@ -1,6 +1,40 @@
 {
 	"abi" :[
 	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "admin",
+				"type": "address"
+			},
+			{
+				"internalType": "address[]",
+				"name": "creators",
+				"type": "address[]"
+			},
+			{
+				"internalType": "address[]",
+				"name": "committers",
+				"type": "address[]"
+			}
+		],
+		"name": "createSupplyChain",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -48,40 +82,6 @@
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "admin",
-				"type": "address"
-			},
-			{
-				"internalType": "address[]",
-				"name": "creators",
-				"type": "address[]"
-			},
-			{
-				"internalType": "address[]",
-				"name": "committers",
-				"type": "address[]"
-			}
-		],
-		"name": "createSupplyChain",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{

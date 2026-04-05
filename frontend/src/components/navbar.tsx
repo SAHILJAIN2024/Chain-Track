@@ -67,9 +67,10 @@ export default function Navbar() {
               className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors cursor-pointer"
               onClick={() => router.push("/market")}
             >
-              Community
+              Warehouse
             </button>
           </li>
+          
           
           <li className="flex items-center gap-6 ml-4 border-l border-white/10 pl-10">
             <Signup />

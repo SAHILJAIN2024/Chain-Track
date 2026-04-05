@@ -106,46 +106,74 @@ const NetworkCapabilities = () => {
 
 // ---------- Data ----------
 const features = [
-  { title: "Decentralized Waste Storage", description: "Records stored on IPFS or Arweave, ensuring tamper-proof, immutable records accessible to all." },
-  { title: "On-Chain Tracking", description: "Verifiable timestamps and blockchain metadata for full transparency of the waste lifecycle." },
-  { title: "Tokenized Recognition", description: "Contributors earn reputation tokens or NFTs for responsible handling." },
-  { title: "Automated Lifecycle", description: "Smart contracts update status from collection to utilization automatically." },
-  { title: "Audit & Compliance", description: "Publicly auditable movement ensuring regulatory compliance and accountability." },
-  { title: "AI-Powered Analytics", description: "Predict generation and optimize routes for smarter city management." }
+  {
+    title: "On-Chain Supply Tracking",
+    description:
+      "Every supply chain event is immutably recorded on blockchain for full transparency and trust.",
+  },
+  {
+    title: "IoT Device Integration",
+    description:
+      "Plug-and-play IoT devices stream real-time location, temperature, and status directly into the system.",
+  },
+  {
+    title: "IPFS Data Storage",
+    description:
+      "All documents, proofs, and metadata are stored on IPFS ensuring tamper-proof verification.",
+  },
+  {
+    title: "Wallet-Based Identity",
+    description:
+      "Each participant is identified via wallet address ensuring secure and decentralized ownership.",
+  },
+  {
+    title: "Multi-Stage Lifecycle Tracking",
+    description:
+      "Track assets across manufacturer, transporter, warehouse, and delivery stages seamlessly.",
+  },
+  {
+    title: "Real-Time Analytics",
+    description:
+      "Monitor supply chain performance, delays, and anomalies with live data feeds.",
+  },
 ];
 
 const stages = [
-  { 
-    id: 0, 
-    label: "User", 
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=300&q=80", // Cyberpunk Person
-    asset: "https://cdn-icons-png.flaticon.com/512/644/644617.png", // E-waste icon
-    color: "#10b981", 
-    description: "The journey begins with the user initiating a decentralized waste request for end-of-life electronics." 
+  {
+    id: 0,
+    label: "Manufacturer",
+    image: "/manufacturer.jpg",
+    asset: "https://cdn-icons-png.flaticon.com/512/679/679922.png",
+    color: "#10b981",
+    description:
+      "Product is created and registered on-chain with metadata and IoT device linkage.",
   },
-  { 
-    id: 1, 
-    label: "Collector", 
-    image: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&w=300&q=80", // High-tech truck/logistics
-    asset: "https://cdn-icons-png.flaticon.com/512/1739/1739521.png", // Truck icon
-    color: "#3b82f6", 
-    description: "Certified collectors receive the request and transport the e-waste to specialized sorting facilities." 
+  {
+    id: 1,
+    label: "Transport",
+    image: "/transporter.jpg",
+    asset: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
+    color: "#3b82f6",
+    description:
+      "IoT devices stream live tracking data while goods are transported across locations.",
   },
-  { 
-    id: 2, 
-    label: "Recycler", 
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80", // Circuitry/Hardware
-    asset: "https://cdn-icons-png.flaticon.com/512/2950/2950153.png", // Recycled components
-    color: "#8b5cf6", 
-    description: "Recyclers dismantle and extract valuable rare-earth metals and reusable components." 
+  {
+    id: 2,
+    label: "Warehouse",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    asset: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png",
+    color: "#8b5cf6",
+    description:
+      "Inventory is validated, stored, and verified using blockchain checkpoints.",
   },
-  { 
-    id: 3, 
-    label: "Processing Hub", 
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=300&q=80", // AI/Robotics
-    asset: "https://cdn-icons-png.flaticon.com/512/900/900618.png", // New device icon
-    color: "#f59e0b", 
-    description: "The hub integrates recycled materials into new manufacturing lines, completing the circular loop." 
+  {
+    id: 3,
+    label: "Delivery",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2",
+    asset: "https://cdn-icons-png.flaticon.com/512/1048/1048314.png",
+    color: "#f59e0b",
+    description:
+      "Final delivery is confirmed with proof (image/IPFS) and ownership is transferred on-chain.",
   },
 ];
 
@@ -201,9 +229,9 @@ const MissionManifesto = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-7xl font-bold text-center tracking-tighter leading-[0.9] md:leading-[0.85]"
             >
-              WE ARE DELETING <br />
-              <span className="text-zinc-800">MESSY LEGACY LOGS</span> <br />
-              TO DEPLOY THE <br />
+              WE ARE REPLACING  <br/>
+<span className="text-zinc-800">UNTRUSTED SUPPLY CHAINS</span><br/>  
+WITH THE  <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 PLANETARY LEDGER.
               </span>
@@ -219,15 +247,17 @@ const MissionManifesto = () => {
           >
             <div className="border-l border-emerald-500/50 pl-6">
               <p className="text-zinc-400 text-lg leading-relaxed">
-                CRX replaces vulnerable paper trails with <span className="text-white font-mono">Immutable Blockchain Records</span>. 
-                Every gram of waste is a digital asset, tracked from origin to reuse.
-              </p>
+  ChainTrack replaces fragmented supply chain systems with 
+  <span className="text-white font-mono"> immutable blockchain records</span>.
+  Every asset movement is verified, traceable, and tamper-proof.
+</p>
             </div>
             <div className="border-l border-zinc-800 pl-6">
               <p className="text-zinc-400 text-lg leading-relaxed">
-                By infusing <span className="text-white font-mono">AI-Driven Efficiency</span> into logistics, we don&apos;t just manage waste; 
-                we architect the end of the landfill era.
-              </p>
+  By integrating 
+  <span className="text-white font-mono"> IoT + real-time data streams</span>,
+  we enable live tracking, anomaly detection, and trustless coordination.
+</p>
             </div>
           </motion.div>
 
@@ -247,18 +277,43 @@ const MissionManifesto = () => {
 };
 // ---------- Sub-Components ----------
 
-const ParallaxImage = ({ src, title, direction }: { src: string; title: string; direction: number }) => {
+const ParallaxImage = ({
+  src,
+  title,
+  direction
+}: {
+  src: string;
+  title: string;
+  direction: number;
+}) => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const x = useTransform(scrollYProgress, [0, 1], [150 * direction, -150 * direction]);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], [80 * direction, -80 * direction]); // 👈 reduced movement
 
   return (
-    <div ref={ref} className="relative h-[50vh] flex items-center justify-center overflow-hidden my-12">
-      <motion.div style={{ x }} className="flex gap-12 items-center whitespace-nowrap">
-        <div className="w-[350px] h-[250px] md:w-[600px] md:h-[400px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-          <img src={src} alt={title} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+    <div
+      ref={ref}
+      className="relative h-[30vh] flex items-center justify-center overflow-hidden my-6"
+    >
+      <motion.div
+        style={{ x }}
+        className="flex gap-6 items-center whitespace-nowrap"
+      >
+        {/* Smaller Image */}
+        <div className="w-[220px] h-[140px] md:w-[350px] md:h-[220px] overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+          <img
+            src={src}
+            alt={title}
+            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+          />
         </div>
-        <h2 className="text-8xl md:text-[12rem] font-black uppercase text-white/5 tracking-tighter select-none">
+
+        {/* Smaller Text */}
+        <h2 className="text-2xl md:text-6xl font-bold uppercase text-white/10 tracking-tight select-none">
           {title}
         </h2>
       </motion.div>
@@ -423,7 +478,7 @@ const Footer = () => {
               whileHover={{ skewX: -10 }}
               className="text-4xl font-black italic tracking-tighter cursor-default"
             >
-              CRX<span className="text-emerald-500">.</span>
+              CHAINTRACK<span className="text-emerald-500">.</span>
             </motion.div>
             <p className="text-zinc-500 max-w-sm text-sm leading-relaxed font-medium">
               Architecting the future of waste management through decentralized protocols and AI-driven reclamation.
@@ -501,19 +556,24 @@ const Dashboard: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-[5rem] md:text-[8rem] font-black leading-[0.85] tracking-tighter mb-8">
-              CRX <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
-                ECO-SYSTEM
-              </span>
-            </h1>
-            <p className="text-zinc-400 text-xl md:text-2xl leading-relaxed max-w-lg mb-10">
-              Transforming waste into digital assets. Secure, transparent, and decentralized management for the modern city.
-            </p>
+  CHAIN <br />
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
+    TRACK
+  </span>
+</h1>
+
+<p className="text-zinc-400 text-xl md:text-2xl leading-relaxed max-w-lg mb-10">
+  Real-time supply chain tracking powered by blockchain + IoT.  
+  Verify every asset, every movement, every transaction — on-chain.
+</p>
             <div className="flex gap-4">
               <Signup />
-              <button className="px-8 py-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all font-bold">
-                EXPLORE DATA
-              </button>
+              <button
+  onClick={() => window.location.href = "/dashboard"}
+  className="px-8 py-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all font-bold"
+>
+  OPEN DASHBOARD
+</button>
             </div>
           </motion.div>
 
@@ -525,7 +585,7 @@ const Dashboard: React.FC = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <img
-                src="/CODE BLOCK.png"
+                src="/BHARATGRAPH.png"
                 alt="Logo"
                 className="relative rounded-full w-72 h-72 md:w-[500px] md:h-[500px] object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700 border-2 border-white/10"
               />
@@ -544,8 +604,8 @@ const Dashboard: React.FC = () => {
         <div className="text-center mb-10">
             <h2 className="text-emerald-500 font-mono text-xs tracking-widest uppercase">Visual Journey</h2>
         </div>
-        <ParallaxImage src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200" title="COLLECT" direction={1} />
-        <ParallaxImage src="/download.jpg" title="SORT" direction={-1} />
+        <ParallaxImage src="/oneclick.jpg" title="Customisable" direction={1} />
+        <ParallaxImage src="/download.jpg" title="Download" direction={-1} />
         <ParallaxImage src="/image3.jpg" title="PROCESS" direction={1} />
       </section>
 
