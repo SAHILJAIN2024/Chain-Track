@@ -90,7 +90,7 @@ export default function CreateSupplyChain() {
       formData.append("location", location);
       formData.append("processSteps", JSON.stringify(processSteps));
 
-      const res = await fetch("http://localhost:5000/api/supply-chains", {
+      const res = await fetch("https://chain-track.onrender.com/api/supply-chains", {
         method: "POST",
         body: formData,
       });

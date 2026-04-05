@@ -106,7 +106,7 @@ export default function BatchCommit() {
         formData.append("location", item.location);
         formData.append("file", item.file);
 
-        const res = await fetch("http://localhost:5000/api/commit", {
+        const res = await fetch("https://chain-track.onrender.com/api/commit", {
           method: "POST",
           body: formData,
         });

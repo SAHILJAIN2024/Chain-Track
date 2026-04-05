@@ -67,7 +67,7 @@ export default function AddCommit() {
       formData.append("location", location);
       formData.append("file", file!);
 
-      const res = await fetch("http://localhost:5000/api/commit", {
+      const res = await fetch("https://chain-track.onrender.com/api/commit", {
         method: "POST",
         body: formData,
       });

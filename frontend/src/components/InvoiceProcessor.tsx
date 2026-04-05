@@ -16,7 +16,7 @@ type Props = {
 export default function InvoiceProcessor({ token }: Props) {
   const processInvoice = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/process-token", {
+      const res = await fetch("https://chain-track.onrender.com/api/process-token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

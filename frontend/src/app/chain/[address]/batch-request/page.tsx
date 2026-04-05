@@ -103,7 +103,7 @@ export default function BatchRequest() {
   formData.append("file", item.file!);
 
 
-  const res = await fetch("http://localhost:5000/api/request", {
+  const res = await fetch("https://chain-track.onrender.com/api/request", {
     method: "POST",
     body: formData,
   });

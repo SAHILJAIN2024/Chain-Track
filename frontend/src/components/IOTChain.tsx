@@ -149,7 +149,7 @@ export default function CreateIOTSupplyChain() {
 
       setStatus("⚙️ Processing IoT batch...");
 
-      const res = await fetch("http://localhost:5000/api/iot-batch", {
+      const res = await fetch("https://chain-track.onrender.com/api/iot-batch", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

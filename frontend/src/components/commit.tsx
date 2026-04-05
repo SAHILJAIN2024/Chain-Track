@@ -76,7 +76,7 @@ export default function Commit() {
       formData.append("message", message);
       formData.append("file", file);
 
-      const response = await fetch("https://crx-7rjl.onrender.com/api/commit", {
+      const response = await fetch("https://chain-track.onrender.com/api/commit", {
         method: "POST",
         body: formData,
       });
