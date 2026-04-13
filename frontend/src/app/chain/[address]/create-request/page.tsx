@@ -94,12 +94,12 @@ const removeProcessStep = (index: number) => {
       setStatus("Uploading metadata to IPFS...");
 
       const formData = new FormData();
-      formData.append("ownerAddress", contractAddress);
-      formData.append("title", title);
-      formData.append("Authority", authority);
-      formData.append("location", location);
-      formData.append("file", file!);
-      formData.append("processSteps", JSON.stringify(processSteps));
+     
+  formData.append("ownerAddress", contractAddress);
+  formData.append("title", title);
+  formData.append("Authority", authority);
+  formData.append("location", location);
+  formData.append("file", file!);
 
       const res = await fetch("https://chain-track.onrender.com/api/request", {
         method: "POST",
