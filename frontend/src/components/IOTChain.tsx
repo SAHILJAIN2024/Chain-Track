@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import Navbar from "../components/navbar";
 import { useWallet } from "../components/WalletContext";
 import FACTORY_ABI from "../contractABI/contractABI.json";
-import CHAIN_ABI from "../contractABI/supplyChainABI.json";
+import CHAIN_ABI from "../contractABI/ABI.json";
 
 /* ---------------- TYPES ---------------- */
 
