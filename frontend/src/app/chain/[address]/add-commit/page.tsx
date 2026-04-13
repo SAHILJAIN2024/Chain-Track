@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { ethers } from "ethers";
 import Navbar from "../../../../components/navbar";
 import { useWallet } from "../../../../components/WalletContext";
-import ABI from "../../../../contractABI/supplyChainABI.json";
+import ABI from "../../../../contractABI/SupplyChainABI.json";
 import { motion } from "framer-motion";
 
 export default function AddCommit() {
