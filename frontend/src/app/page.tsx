@@ -313,7 +313,7 @@ const ParallaxImage = ({
         </div>
 
         {/* Smaller Text */}
-        <h2 className="text-2xl md:text-6xl font-bold uppercase text-white/10 tracking-tight select-none">
+        <h2 className="text-2xl md:text-5xl font-bold uppercase text-white/10 tracking-tight select-none">
           {title}
         </h2>
       </motion.div>
@@ -563,8 +563,7 @@ const Dashboard: React.FC = () => {
 </h1>
 
 <p className="text-zinc-400 text-xl md:text-2xl leading-relaxed max-w-lg mb-10">
-  Real-time supply chain tracking powered by blockchain + IoT.  
-  Verify every asset, every movement, every transaction — on-chain.
+  One - click deployable supply chain contract deployment with IOT integration, OCR Intelligence and High Performance Batch mining for Real-Time Supply Chain Automation.
 </p>
             <div className="flex gap-4">
               <Signup />
@@ -600,14 +599,44 @@ const Dashboard: React.FC = () => {
 
       <CircularEconomy />
 
-      <section className="py-20">
-        <div className="text-center mb-10">
-            <h2 className="text-emerald-500 font-mono text-xs tracking-widest uppercase">Visual Journey</h2>
-        </div>
-        <ParallaxImage src="/oneclick.jpg" title="Customisable" direction={1} />
-        <ParallaxImage src="/download.jpg" title="Download" direction={-1} />
-        <ParallaxImage src="/image3.jpg" title="PROCESS" direction={1} />
-      </section>
+      <section className="py-24 relative">
+  {/* Background Glow */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute top-0 left-1/4 w-72 h-72 bg-emerald-500/10 blur-[120px] rounded-full" />
+    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-cyan-500/10 blur-[120px] rounded-full" />
+  </div>
+
+  <div className="text-center mb-16 relative z-10">
+    <h2 className="text-emerald-500 font-mono text-xs tracking-[0.4em] uppercase mb-3">
+      Visual Journey
+    </h2>
+    <h1 className="text-4xl md:text-6xl font-black tracking-tight">
+      Smart <span className="text-emerald-500">Production Flow</span>
+    </h1>
+    <p className="text-zinc-500 text-sm mt-3 font-mono">
+      IoT-driven tracking across manufacturing lifecycle
+    </p>
+  </div>
+
+  {/* PARALLAX SECTIONS */}
+  <ParallaxImage
+    src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc"
+    title="One click deployable supply chain"
+    direction={1}
+  />
+
+  <ParallaxImage
+  src="./automated.jpg"
+  title="Smart Warehouses Automation"
+  direction={-1}
+/>
+
+<ParallaxImage
+  src="./iot.jpg"
+  title="IOT Devices Streaming"
+  direction={1}
+/>
+</section>
 
       {/* Features Grid */}
       <NetworkCapabilities />
